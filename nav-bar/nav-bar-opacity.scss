@@ -1,0 +1,18 @@
+@import '../_css/mixins';
+@import 'nav-bar-basics';
+@import 'nav-bar-a';
+
+
+nav li:hover ul {
+ 	visibility: visible;
+	opacity: 1;
+	z-index: 100;
+}
+
+nav li ul {
+	visibility: hidden;
+	opacity: 0;
+	z-index: 10;
+	@include transition(all .5s .2s);	
+	-webkit-font-smoothing: subpixel-antialiased; // for transition so text doesn't look weird in chrome and safari
+}

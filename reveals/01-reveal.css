@@ -1,0 +1,69 @@
+/* transition mixins */
+/* animation mixins */
+.reveal {
+  width: 450px;
+  /* match width and height of photo */
+  height: 337px;
+  position: relative;
+  /* set context for text box */
+  overflow: hidden;
+  /* don't show the content outside */
+  display: inline-block; }
+  .reveal h2 {
+    font-size: 1.8em; }
+
+.hidden-content {
+  position: absolute;
+  width: 450px;
+  height: 337px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  -moz-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  -webkit-transition: all 0.75s;
+  -ms-transition: all 0.75s;
+  transition: all 0.75s; }
+
+.top {
+  top: -337px;
+  /* place out of the box */
+  left: 0; }
+
+.reveal:hover .top {
+  top: 0px; }
+
+.left {
+  left: -450px;
+  /* place out of the box */
+  top: 0; }
+
+.reveal:hover .left {
+  left: 0px; }
+
+.center {
+  -moz-transform: scale(0, 1);
+  -o-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1); }
+
+.reveal:hover .center {
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.spin {
+  -moz-transform: scale(0) rotate(0);
+  -o-transform: scale(0) rotate(0);
+  -ms-transform: scale(0) rotate(0);
+  -webkit-transform: scale(0) rotate(0);
+  transform: scale(0) rotate(0); }
+
+.reveal:hover .spin {
+  -moz-transform: scale(1) rotate(720deg);
+  -o-transform: scale(1) rotate(720deg);
+  -ms-transform: scale(1) rotate(720deg);
+  -webkit-transform: scale(1) rotate(720deg);
+  transform: scale(1) rotate(720deg); }

@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nav Bar Opacity</title>
+<link href="../_css/site.css" rel="stylesheet">
+<style>
+nav {
+	display: inline-block;	
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+nav a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.5);
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: black;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 5s;
+  height: 15px;
+  width: 100px;
+}
+nav:hover a {
+  background-color: red; 
+  width: 600px;
+}
+#ease {
+-webkit-transition-timing-function: ease;
+}
+#linear {
+-webkit-transition-timing-function: linear;
+}
+#ease-in {
+-webkit-transition-timing-function: ease-in;
+}
+#ease-in-out {
+-webkit-transition-timing-function: ease-in-out;
+}
+#cubic {
+-webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+overflow: hidden;
+}
+#steps-end {
+-webkit-transition-timing-function: steps(5,end);
+}
+#steps-start {
+-webkit-transition-timing-function: steps(5,start);
+}
+#step-start {
+-webkit-transition-timing-function: step-start;
+}
+#step-end {
+-webkit-transition-timing-function: step-end;
+}
+</style>
+<script src="../_js/modernizr.custom.30290.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>transition-timing-function <small>5s duration</small></h1>
+<nav>
+<ul>
+<li><a href="#" id="ease">ease</a></li>
+<li><a href="#" id="linear">linear</a></li>
+<li><a href="#" id="ease-in">ease-in</a></li>
+<li><a href="#" id="ease-in-out">ease-in-out</a></li>
+<li><a href="#" id="cubic">cubic-bezier(0.680, -0.550, 0.265, 1.550)</a></li>
+	<li><a href="#" id="steps-end">step(5,end)</a></li>
+	<li><a href="#" id="steps-start">step(5,start)</a></li>
+	<li><a href="#" id="step-start">step-start</a></li>
+	<li><a href="#" id="step-end">step-end</a></li>
+</ul>
+</nav>
+</div>
+</body>
+</html>

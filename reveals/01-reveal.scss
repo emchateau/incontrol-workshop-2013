@@ -1,0 +1,54 @@
+@import '../_css/mixins';
+
+.reveal {
+	width: 450px; /* match width and height of photo */
+	height: 337px; 	
+	position: relative; /* set context for text box */
+	overflow: hidden; /* don't show the content outside */
+	display: inline-block;
+	
+	& h2 {
+		font-size: 1.8em;	
+	}
+}
+
+.hidden-content {
+	position: absolute;	
+	width: 450px;
+	height: 337px;
+	background-color: rgba(255,255,255,.8);
+	padding: 20px;
+	@include transition(all .75s);
+}
+
+.top  {
+	top: -337px; /* place out of the box */	
+	left: 0;
+}
+
+.reveal:hover .top {
+	top: 0px;	
+}
+
+.left  {
+	left: -450px; /* place out of the box */	
+	top: 0;
+}
+
+.reveal:hover .left {
+	left: 0px;	
+}
+
+.center {
+	@include transform(scale(0,1));
+}
+.reveal:hover .center {
+	@include transform(scale(1));	
+}
+
+.spin {
+	@include transform(scale(0) rotate(0));
+}
+.reveal:hover .spin {
+	@include transform(scale(1) rotate(720deg));	
+}

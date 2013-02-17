@@ -1,0 +1,27 @@
+/* alternative sassy-way */
+/* transition mixins */
+/* animation mixins */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: black;
+  -moz-transition-property: background-color, color, height;
+  -o-transition-property: background-color, color, height;
+  -webkit-transition-property: background-color, color, height;
+  transition-property: background-color, color, height;
+  -moz-transition-property: 0.75s;
+  -o-transition-property: 0.75s;
+  -webkit-transition-property: 0.75s;
+  transition-property: 0.75s; }
+nav a:hover {
+  background-color: red; }

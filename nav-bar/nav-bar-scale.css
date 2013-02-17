@@ -1,0 +1,89 @@
+/* transition mixins */
+/* animation mixins */
+/* transition mixins */
+/* animation mixins */
+nav ul {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 4px solid red;
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+  background-image: linear-gradient($grad);
+  zoom: 1; }
+  nav ul:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+nav li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+nav li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: Cambria, "Hoefler Text", Times, "Times New Roman", serif; }
+
+nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+nav li:hover ul {
+  z-index: 100;
+  border-bottom: none; }
+
+nav li ul {
+  background-color: #de2d1f;
+  position: absolute;
+  z-index: 10;
+  border-radius: 0 0 5px 5px;
+  width: 10em; }
+
+nav li li {
+  float: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+nav li a {
+  -moz-transition: background-color 250ms;
+  -o-transition: background-color 250ms;
+  -webkit-transition: background-color 250ms;
+  -ms-transition: background-color 250ms;
+  transition: background-color 250ms; }
+
+nav li:hover ul {
+  -moz-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  moz-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  z-index: 100; }
+
+nav li ul {
+  -moz-transform: scale(1, 0);
+  -o-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  moz-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  z-index: 10;
+  -moz-transition: all 1s 0.2s;
+  -o-transition: all 1s 0.2s;
+  -webkit-transition: all 1s 0.2s;
+  -ms-transition: all 1s 0.2s;
+  transition: all 1s 0.2s;
+  -webkit-font-smoothing: subpixel-antialiased; }

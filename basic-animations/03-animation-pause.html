@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>InControl 2013</title>
+<link href="../_css/site.css" rel="stylesheet" type="text/css">
+<style>
+/* basic styles */
+
+div div {
+	border: 1px solid rgba(0,0,0,.5);
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 1em;
+}
+
+
+/* animation styles */
+@-webkit-keyframes grow {
+	from {
+		width: 50px;
+		background-color:yellow;
+		color: black;
+	}
+	75% {
+		background-color: red;
+		width: 400px;
+	}
+	to {
+		background-color:black;
+		width: 700px;
+		color: white;
+	}
+}
+
+.grow {
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-fill-mode: forwards;
+}
+.grow:hover {
+	-webkit-animation-play-state:paused;	
+}
+
+
+</style>
+<script src="../_js/modernizr.custom.30290.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Pausing the animation <small>animation-play-state: paused</small></h1>
+<div class="grow">
+	<h2>Mouse over me</h2>
+</div>
+</div>
+</body>
+</html>

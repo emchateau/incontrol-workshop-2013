@@ -1,0 +1,35 @@
+@import '_mixins';
+@import '_reset';
+@import '_fonts';
+
+// basics
+body {
+  background-image: url(../_images/light-tile.gif);
+  font-family: QuicksandBold;
+  margin-top: 50px;
+}
+
+.container {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+h1 {
+	font-family: QuicksandLight;
+	font-weight: normal;
+	font-size: 3em;	
+	margin-bottom: .5em;
+}
+small {
+	font-size: 40%;	
+	font-family: QuicksandBold;
+}
+
+h2 {
+  @extend h1;
+  font-size: 2em;
+}
+
+.box {
+@include clearfloat();	
+}

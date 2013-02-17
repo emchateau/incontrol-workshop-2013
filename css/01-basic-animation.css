@@ -1,0 +1,64 @@
+/* transition mixins */
+/* animation mixins */
+@-o-keyframes cycleColor {
+  from {
+    background-color: white; }
+
+  33% {
+    background-color: green; }
+
+  66% {
+    background-color: blue; }
+
+  to {
+    background-color: red; } }
+
+@-moz-keyframes cycleColor {
+  from {
+    background-color: white; }
+
+  33% {
+    background-color: green; }
+
+  66% {
+    background-color: blue; }
+
+  to {
+    background-color: red; } }
+
+@-webkit-keyframes cycleColor {
+  from {
+    background-color: white; }
+
+  33% {
+    background-color: green; }
+
+  66% {
+    background-color: blue; }
+
+  to {
+    background-color: red; } }
+
+@keyframes cycleColor {
+  from {
+    background-color: white; }
+
+  33% {
+    background-color: green; }
+
+  66% {
+    background-color: blue; }
+
+  to {
+    background-color: red; } }
+
+.cycle {
+  height: 300px;
+  -o-animation-name: cycleColor;
+  -moz-animation-name: cycleColor;
+  -webkit-animation-name: cycleColor;
+  animation-name: cycleColor;
+  -o-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }

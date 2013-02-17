@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nav Bar Opacity</title>
+<link href="../_css/site.css" rel="stylesheet">
+<style>
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+nav li {
+	display: inline-block;	
+}
+nav a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.5);
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: black;
+  -moz-transition-property: background-color;
+  -moz-transition-duration: .75s;
+  -o-transition-property: background-color;
+  -o-transition-duration: .75s;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 5s;
+  transition-property: background-color;
+  transition-duration: .75s;
+  -webkit-transition-timing-function: steps(5,end);
+}
+nav a:hover {
+  background-color: red; 
+}
+</style>
+<script src="../_js/modernizr.custom.30290.js"></script>
+</head>
+<body>
+<div class="container">
+<nav>
+<ul>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Products</a></li>
+	<li><a href="#">Blog</a></li>
+</ul>
+</nav>
+</div>
+</body>
+</html>

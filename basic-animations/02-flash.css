@@ -1,0 +1,48 @@
+/* transition mixins */
+/* animation mixins */
+@-o-keyframes flash {
+  from {
+    background-color: white; }
+
+  to {
+    background-color: yellow; } }
+
+@-moz-keyframes flash {
+  from {
+    background-color: white; }
+
+  to {
+    background-color: yellow; } }
+
+@-webkit-keyframes flash {
+  from {
+    background-color: white; }
+
+  to {
+    background-color: yellow; } }
+
+@keyframes flash {
+  from {
+    background-color: white; }
+
+  to {
+    background-color: yellow; } }
+
+body {
+  background-image: none;
+  -o-animation-name: flash;
+  -moz-animation-name: flash;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -o-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -o-animation-iteration-count: 10;
+  -moz-animation-iteration-count: 10;
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10;
+  -o-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }

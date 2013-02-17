@@ -1,0 +1,22 @@
+@import '../_css/mixins';
+
+@include keyframes(cycleColor) {
+	from {
+	   background-color: white;
+	}
+	33% {
+	   background-color: green;
+	}
+	66% {
+	   background-color: blue;
+	}
+	to {
+	   background-color: red;
+	}
+}
+
+.cycle {
+	height: 300px;
+	@include animation-name(cycleColor);
+	@include animation-duration(1s);	
+}

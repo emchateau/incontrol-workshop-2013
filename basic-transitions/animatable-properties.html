@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>Animatable Properties</title>
+<link href="../_css/site.css" rel="stylesheet" type="text/css">
+<style>
+.box-holder {
+  position: relative;	
+}
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	background-color: #FFF;
+	color: black;
+	border: solid 4px black;
+	padding: 10px;
+	margin: 5px;
+	font-weight: bold;
+	font-size: .75em;
+	-webkit-transition: all 1000ms;
+	-o-transition: all 1000ms;
+	-moz-transition: all 1000ms;
+	transition: all 1000ms;
+}
+form {
+	margin-left: 250px;	
+	font-size: 1.2em;
+	line-height: 2;
+}
+label {
+  float: left;
+  width: 10em;	
+  text-align: right;
+  margin-right: 1em;
+}
+input[type='submit'] {
+	margin-left: 19.3em;	
+}
+</style>
+<script src="../_js/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('#animate').click(function() {
+		var cssProp = $('#property').val();
+		var value= $('#cssValue').val();
+		$('#box').css(cssProp,value);
+		return false;
+	}); // end click
+	
+}); // end ready
+</script>
+<script src="../_js/modernizr.custom.30290.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Animatable Properties</h1>
+<div class="box-holder">
+<div class="box" id="box">
+      <h2>Test Box</h2>
+      <p>Sample text in here</p>
+    </div>
+    </div>
+    <form id="tranForm" name="tranForm" method="post" action="">
+      <p>
+        <label for="property">CSS Property</label>
+        <select name="property" id="property">
+          <option value="backgroundColor">background-color</option>
+          <option value="borderColor">boder-color</option>
+          <option value="borderWidth">boder-width</option>
+          <option value="borderSpacing">border-spacing</option>
+          <option value="bottom">bottom</option>
+          <option value="color">color</option>
+          <option value="crop">crop</option>
+          <option value="fontSize">font-size</option>
+          <option value="fontWeight">font-weight</option>
+          <option value="height">height</option>
+          <option value="left">left</option>
+          <option value="letterSpacing">letter-spacing</option>
+          <option value="lineHeight">line-height</option>
+          <option value="marginTop">margin-top</option>
+          <option value="marginRight">margin-right</option>
+          <option value="marginBottom">margin-bottom</option>
+          <option value="marginLeft">margin-left</option>
+          <option value="maxHeight">max-height</option>
+          <option value="maxWidth">max-width</option>
+          <option value="minHeight">min-height</option>
+          <option value="minWidth">min-width</option>
+          <option value="opacity">opacity</option>
+          <option value="outlineColor">outline-color</option>
+          <option value="outlineOffset">outline-offset</option>
+          <option value="outlineWidth">outline-width</option>
+          <option value="paddingTop">padding-top</option>
+          <option value="paddingRight">padding-right</option>
+          <option value="paddingBottom">padding-bottom</option>
+          <option value="paddingLeft">padding-left</option>
+          <option value="right">right</option>
+          <option value="textIndent">text-indent</option>
+          <option value="textShadow">text-shadow</option>
+          <option value="top">top</option>
+          <option value="verticalAlign">vertical-align</option>
+          <option value="visibility">visibility</option>
+          <option value="width">width</option>
+          <option value="wordSpacing">word-spacing</option>
+          <option value="zIndex">z-index</option>
+        </select>
+      </p>
+      <p>
+        <label for="cssValue">Value</label>
+        <input type="text" name="cssValue" id="cssValue" />
+      </p>
+      <p>
+        <input type="submit" name="animate" id="animate" value="Animate it!" />
+      </p>
+    </form>
+
+</div>
+</body>
+</html>

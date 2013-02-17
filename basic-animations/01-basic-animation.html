@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>InControl 2013</title>
+<link href="../_css/site.css" rel="stylesheet" type="text/css">
+<style>
+@-webkit-keyframes cycleColor {
+	from {
+	   background-color: white;
+	}
+	33% {
+	   background-color: green;
+	}
+	66% {
+	   background-color: blue;
+	}
+	to {
+	   background-color: red;
+	}
+}
+
+.cycle {
+	height: 300px;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,2);
+}
+.cycle:hover {
+	-webkit-animation-name: cycleColor;
+	-webkit-animation-duration: 1s;	
+}
+</style>
+<script src="../_js/modernizr.custom.30290.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Basic animation</h1>
+<div class="cycle"></div>
+</div>
+</body>
+</html>

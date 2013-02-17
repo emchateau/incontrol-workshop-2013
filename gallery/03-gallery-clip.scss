@@ -1,0 +1,40 @@
+@import '../_css/_mixins.scss';
+
+.keyhole {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	float: left;
+	margin: 10px;
+	border: 3px solid #FFF;
+	box-shadow: 3px 3px 3px rgba(102,102,102,.75);
+	@include transition(all .75s);	
+}
+
+.keyhole:hover {
+	width: 300px;
+	height: 400px;	
+}
+
+.keyhole img {
+	position: absolute;
+	@include transition(all .75s);	
+}
+.keyhole:hover img {
+	left: 0;
+	top: 0;	
+}
+
+.port img {
+  left: -160px;
+  top: -90px; }
+  
+.transamerica img {
+  left: -100px;
+  top: -90px; }
+  
+.statue img {
+  left: -100px;
+  top: -50px; }
+  

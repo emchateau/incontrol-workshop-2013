@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>InControl 2013</title>
+<link href="../_css/site.css" rel="stylesheet" type="text/css">
+<style>
+/* basic styles */
+
+div div {
+	border: 1px solid rgba(0,0,0,.5);
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 1em;
+}
+
+button {
+  display: inline-block;
+  margin: -20px 10px 20px 0;	
+}
+
+button a {
+	text-decoration: none;
+	color: black;	
+}
+
+#reload, #pause {
+	display: none;	
+}
+
+/* animation styles */
+@-webkit-keyframes myAnim {
+	from {
+		background-color:yellow;
+		color: black;
+	}
+	to {
+		background-color:black;
+		color: white;
+	}
+}
+
+
+.no-delay div div {
+	-webkit-animation-name: myAnim;
+	-webkit-animation-duration: 5s;
+}
+
+.delay div div {
+	-webkit-animation-name: myAnim;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-delay: 5s;
+}
+
+#none{
+	-webkit-animation-fill-mode: none;	
+}
+#backwards {
+	-webkit-animation-fill-mode: backwards;	
+}
+#forwards {
+	-webkit-animation-fill-mode: forwards;	
+}
+#both {
+	-webkit-animation-fill-mode: both;	
+}
+
+.no-delay div div:hover, .delay div div:hover {
+	-webkit-animation-play-state:paused;	
+}
+
+</style>
+<script src="../_js/modernizr.custom.30290.js"></script>
+<script src="../_js/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#no-delay').click(function(e) {
+		$('html').addClass('no-delay');
+		removeAnimButtons();
+	}); // end click
+	$('#delay').click(function(e) {
+		$('html').addClass('delay');
+		removeAnimButtons();
+	}); // end click
+	
+	function removeAnimButtons() {
+		$('#no-delay, #delay').remove();
+		$('#reload').show();	
+	}
+}); // end ready
+</script>
+</head>
+<body>
+<div class="container">
+<h1>animation-fill-mode <small>animation-duration: 5s</small></h1>
+<button id="no-delay">Start animation (no delay)</button>
+<button id="delay">Start animation (5s delay)</button>
+<button id="pause">Pause animation</button>
+<button id="reload"><a href="02-animation-fill-mode.html">Reload page</a></button>
+<div id="none">
+	<h2>animation-fill-mode: none</h2>
+</div>
+<div id="forwards">
+	<h2>animation-fill-mode: forwards</h2>
+</div>
+<div id="backwards">
+	<h2>animation-fill-mode: backwards</h2>
+</div>
+<div id="both">
+	<h2>animation-fill-mode: both</h2>
+</div>
+</div>
+</body>
+</html>

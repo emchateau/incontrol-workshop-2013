@@ -1,0 +1,26 @@
+@import '../_css/_mixins.scss';
+
+img {
+	@include transition(all .75s);	
+	position: relative;
+	z-index: 10;
+	margin: 10px;
+	border: 3px solid #FFF;
+	box-shadow: 3px 3px 3px rgba(102,102,102,.75)
+}
+
+img:hover {
+	z-index: 100;
+	@include transform(rotate(360deg) scale(3));
+}
+
+img.medium:hover {
+	z-index: 100;
+	@include transform(rotate(360deg) scale(2));
+}
+
+
+img.big:hover {
+	z-index: 100;
+	@include transform(rotate(360deg) scale(1.5));
+}

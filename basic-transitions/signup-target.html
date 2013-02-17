@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>:target trigger</title>
+<link href="../_css/site.css" rel="stylesheet">
+<style>
+/* basic formatting styles for signup form */
+
+#signup h2 {
+	font-size: 1em;
+	font-family: QuicksandBold;
+	margin-bottom: 1em;	
+}
+#signup a {
+	text-decoration: none;
+	color: black;	
+}
+#signup label {
+	width: 4em;
+	font-size: .8em;
+	display: inline-block;	
+}
+#signup input[type="submit"] {
+	margin-left: 5.3em;
+}
+#signup .close {
+	display: inline-block;
+	border-radius: 3px;
+	background-color: black;
+	color: white;
+	font-size: .8em;
+	font-family: QuicksandBold;
+	padding: 2px 8px;
+}
+
+/* important styles */
+#signup {
+	position: absolute;
+	top: 0;
+	right: 8em;
+	padding: .5em;	
+	background-color: white;
+	border: 1px solid black;
+	height: 1em;
+	width: 15em;
+	overflow: hidden;
+	-webkit-transition: all .75s;
+}
+#signup:target {
+	height: 6em;	
+}
+
+#signup .close {
+	position: absolute;
+	top: .5em;
+	right: .5em;
+	opacity: 0;	
+	-webkit-transition: all 1s;
+}
+#signup:target .close {
+	opacity: 1;	
+}
+
+
+</style>
+<script src="../_js/modernizr.custom.30290.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>:target trigger</h1>
+<div id="signup">
+<a href="#signup"><h2>Sign up today</h2></a>
+<a href="#" class="close">X</a>
+<form>
+	<p>
+		<label for="email">E-mail</label>
+		<input type="text" name="email" id="email">
+	</p>
+	<p>
+		<input type="submit" name="submit" id="submit" value="Submit">
+	</p>
+</form>
+</div>
+
+</div>
+</body>
+</html>
